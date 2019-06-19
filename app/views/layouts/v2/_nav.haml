@@ -1,0 +1,13 @@
+.navbar.sticky-top
+  %a.navbar-brand{ href: dashboard_path }
+    %i.fas.fa-home
+  .nav-item.dropdown
+    %a.nav-link.dropdown-toggle{ href: '#', data: { toggle: 'dropdown' } }
+      .Circle.Circle--withContent
+        MS
+    .dropdown-menu.dropdown-menu-right
+      %a.dropdown-item{ href: '#' }
+        Profile
+      %a.dropdown-item{ href: destroy_user_session_path, data: { method: :delete } }
+        %i.fas.fa-sign-out-alt
+        Logout

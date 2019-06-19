@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    = render 'layouts/v1/head'
+  %body
+    .wrapper
+      = render 'layouts/v1/sidebar'
+      .main-panel
+        = render 'layouts/v1/nav'
+        = render 'layouts/v1/flash_messages'
+        .main-content
+          = yield

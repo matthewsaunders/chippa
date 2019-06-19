@@ -1,0 +1,17 @@
+.navbar {
+  background-color: $colors-blue;
+  color: $colors-white;
+
+  a {
+    color: $colors-white;
+  }
+
+  .dropdown-toggle::after {
+    display:none;
+  }
+
+  .dropdown-item {
+    font-size: 16;
+    color: $colors-text-grey;
+  }
+}

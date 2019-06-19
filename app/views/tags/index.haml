@@ -1,0 +1,55 @@
+.row
+  .col
+    %nav.breadcrumb.mb-0.u-bgWhite
+      .container
+        %a.breadcrumb-item{ href: dashboard_path }
+          Dashboard
+        %span.breadcrumb-item.active
+          Tags
+
+.u-bgGrey.u-fullHeight
+  .container
+    .row.py-4
+      .col-md-3
+        = form_tag tags_path, method: :get do
+          .input-group
+            .input-group-prepend
+              %span.input-group-text
+                %i.fas.fa-search.pl-1.pr-1
+            %input#q.form-control{ type: 'text', name: :q, placeholder: 'Search all tags', value: @search, autocomplete: 'off' }
+      .col.text-right
+        %button#js-new-tag-btn.js-tag-form-new-toggle.btn.btn-primary
+          New Tag
+
+    - if @search
+      .row.mb-3
+        .col
+          %a{ href: tags_path }
+            %p.mb-0
+              %i.fas.fa-times-circle.mx-1
+              Clear current search
+
+    .row
+      .col
+        #js-tag-form-new.card.mb-3{ style: 'display: none;' }
+          .card-body
+            = render 'tags/form', { tag: Tag.new }
+
+    .row
+      .col
+        .card
+          .card-header
+            .row
+              .col
+                = @tags.count
+                tags
+              -# .col.text-right
+              -#   %a{ href: '#' }
+              -#     Sort
+              -#     %i.fas.fa-caret-down.pl-1.pr-1
+          - @tags.each do |tag|
+            %ul.list-group.list-group-flush
+              %li.list-group-item
+                .row
+                  .col
+                    = render 'tags/form', { tag: tag }

@@ -1,0 +1,49 @@
+- submit_btn_text ||= 'Create Media Member'
+- cancel_btn_text ||= 'Cancel'
+
+= form_for media_member do |f|
+  .form-row.mb-2
+    %h2 Media Member
+  .form-row.mb-2
+    .form-group.mb-0.col-md-4
+      %label.mb-1 First name
+      = f.text_field :first_name, class: 'form-control', placeholder: 'First name'
+    .form-group.mb-0.col-md-4
+      %label.mb-1 Last name
+      = f.text_field :last_name, class: 'form-control', placeholder: 'Last name'
+    .form-group.mb-0.col-md-4
+      %label.mb-1 Job title
+      = f.text_field :job_title, class: 'form-control', placeholder: 'Job title'
+
+  %hr
+
+  .form-row
+    .form-group.mb-0.col-md-6
+      %label.mb-1 Email
+      #js-email-list
+        = f.fields_for :emails do |ff|
+          #js-email-list-container
+            - media_member.emails.each_with_index do |email, index|
+              .js-email-row.form-row
+                .form-group.col-md-12.d-flex
+                  = ff.text_field :address, class: 'js-email-input form-control mr-2', placeholder: 'Email', value: email.address, name: "media_member[emails][#{index}][address]"
+                  %button.js-remove-email-btn.btn.btn-danger.float-right{ type: 'button' }
+                    %i.fas.fa-minus
+          .form-row
+            .form-group.col-md-12
+              %button#js-add-email-btn.btn.btn-primary.float-right{ type: 'button' }
+                %i.fas.fa-plus
+                Add Email
+
+  %hr
+
+  .form_row
+    .float-right
+      %a.btn.btn-outline-secondary{ href: media_members_path }
+        = cancel_btn_text
+      = f.submit submit_btn_text, class: 'btn btn-success'
+
+:javascript
+  $(document).ready(function() {
+    Chippa.EmailList('js-email-list');
+  });

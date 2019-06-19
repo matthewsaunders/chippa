@@ -1,0 +1,8 @@
+- @media_members.in_groups_of(3) do |mm_array|
+  .row.mb-3
+    - mm_array.compact.each do |mm|
+      .col-md-4
+        .card
+          .card-body
+            %h5.card-title= mm.full_name
+            %h6.card-subtitle.mb-2.text-muted= mm.job_title

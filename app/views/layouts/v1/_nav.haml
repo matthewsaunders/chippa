@@ -1,0 +1,17 @@
+%header.navbar.navbar-expand.u-bgWhite
+  .navbar-brand
+    %button#sidebar-toggle.btn.btn-primary
+      %i.fas.fa-align-left
+  %ul.navbar-nav.ml-auto
+    - if current_user
+      %li.nav-item.dropdown
+        %a.nav-item.nav-link.dropdown-toggle{ href: '#', data: { toggle: "dropdown" }, role: "button" }
+          %i.fas.fa-user
+        .dropdown-menu.dropdown-menu-right
+          %a.dropdown-item{ href: '#' } Settings
+          %a.dropdown-item{ href: '#' } Help
+          .dropdown-divider
+          = link_to 'Logout', destroy_user_session_path, class: 'dropdown-item', method: :delete
+    - else
+      %li.nav-item
+        %a.nav-link.active{ href: new_user_session_path } Login

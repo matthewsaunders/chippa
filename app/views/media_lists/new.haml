@@ -1,0 +1,78 @@
+.row
+  .col
+    %nav.breadcrumb.mb-0.u-bgWhite
+      .container
+        %a.breadcrumb-item{ href: dashboard_path }
+          Dashboard
+        %a.breadcrumb-item{ href: media_lists_path }
+          Lists
+        %span.breadcrumb-item.active
+          New
+.u-bgGrey.u-fullHeight
+  .container
+    .row.py-4
+      .col
+        .card
+          .card-body
+            .row
+              .col
+                %h3 New List
+
+            %hr
+
+            = form_for @media_list do |f|
+              .form-group.row
+                .col-md-2.col-form-label.text-right
+                  %label Name
+                .col-md-10
+                  = f.text_field :name, class: 'form-control', placeholder: 'Name'
+              .form-group.row
+                .col-md-2.col-form-label.text-right
+                  %label Description
+                .col-md-10
+                  = f.text_area :description, class: 'form-control', placeholder: 'Write a comment or description here...'
+
+              %hr
+
+              -# .form-group.row
+              -#   .col-md-2.col-form-label.text-right
+              -#     %label Tags
+              -#   .col-md-10
+              -#     #js-tag-finder
+              -#       .row
+              -#         .col-md-6
+              -#           %input#js-tag-name-input.form-control{ type: 'text', style: 'border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;', placeholder: 'Search by tag name...' }
+              -#           .scrollable{ style: 'height: 200px; border: 1px solid red; border: 1px solid #ced4da;' }
+              -#             - @tags.each do |tag|
+              -#               .mx-2.my-2{ style: '' }
+              -#                 %p= tag.name
+              -#
+              -# %hr
+
+              -# .form-group.row
+              -#   .col-md-2.col-form-label.text-right
+              -#     %label Members
+              -#   .col-md-10
+              -#     .row
+              -#       .col-md-6.mr-0.pr-0
+              -#         #js-from.scrollable{ style: 'height: 200px; border: 1px solid #ced4da;' }
+              -#           - @media_members.each do |mm|
+              -#             .mx-2.my-2{ style: '' }
+              -#               %p= mm.full_name
+              -#       .col-md-6.ml-0.pl-0
+              -#         #js-to.scrollable{ style: 'height: 200px; border: 1px solid #ced4da;' }
+
+
+              .form-group.row
+                .col
+                  = f.submit 'Create Media List', class: 'btn btn-success float-right'
+
+:javascript
+  // $(document).ready(function() {
+  //   $('#js-tag-select').select2();
+  // });
+  $(function() {
+    $( "#js-from, #js-to" ).sortable({
+      connectWith: ".scrollable"
+    }).disableSelection();
+  });

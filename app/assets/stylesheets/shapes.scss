@@ -1,0 +1,9 @@
+.Circle {
+  border-radius: 50%;
+  border: 2px solid $colors-white;
+  background-color: $colors-yellow;
+}
+
+.Circle--withContent {
+  padding: 5px;
+}

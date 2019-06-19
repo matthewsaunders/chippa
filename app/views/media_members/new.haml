@@ -1,0 +1,18 @@
+.row
+  .col
+    %nav.breadcrumb.mb-0.u-bgWhite
+      .container
+        %a.breadcrumb-item{ href: dashboard_path }
+          Dashboard
+        %a.breadcrumb-item{ href: media_members_path }
+          Media Members
+        %span.breadcrumb-item.active
+          New
+
+.u-bgGrey.u-fullHeight
+  .container
+    .row.py-4
+      .col
+        .card
+          .card-body
+            = render 'media_members/form', media_member: @media_member, btn_text: 'Create Media Member'

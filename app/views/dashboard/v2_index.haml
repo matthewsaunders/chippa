@@ -1,0 +1,42 @@
+.u-bgGrey.u-fullHeight
+  .container.py-3
+    .row
+      .col-lg-3.my-2
+        %ul.list-group
+          %li.list-group-item
+            %a{ href: media_members_path }
+              %i.fas.fa-users.mr-2
+              Media Members
+          %li.list-group-item
+            %a{ href: tags_path }
+              %i.fas.fa-tags.mr-2
+              Tags
+          %li.list-group-item
+            %a{ href: media_lists_path }
+              %i.fas.fa-list.mr-2
+              Lists
+
+
+      .col-lg-9.my-2
+        .row
+          .col
+            %h3
+              %i.fas.fa-history.mr-2
+              Recently Viewed
+        .row
+          - if @recently_viewed.empty?
+            .col
+              %p None
+          - else
+            - @recently_viewed.each do |rv|
+              = render 'list', list: rv
+        .mt-3
+        .row
+          .col
+            %h3
+              %i.fas.fa-list.mr-2
+              My Lists
+        .row
+          - @media_lists.each do |ml|
+            = render 'list', list: ml
+          = render 'list', list: nil, name: 'Create new list...', link: new_media_list_path

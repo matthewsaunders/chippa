@@ -1,0 +1,15 @@
+.row
+  .col
+    %nav.breadcrumb.mb-0.u-bgWhite
+      .container
+        %a.breadcrumb-item{ href: dashboard_path }
+          Dashboard
+        %a.breadcrumb-item{ href: media_lists_path }
+          Lists
+        %span.breadcrumb-item.active
+          = @media_list.name
+.u-bgGrey.u-fullHeight
+  .container
+    .row.py-4
+      .col
+        %h2= @media_list.name

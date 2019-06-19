@@ -1,0 +1,18 @@
+%table.table.is-bordered.is-fullwidth
+  %thead.has-background-grey-lighter
+    %tr
+      %th First Name
+      %th Last Name
+      %th Job Title
+      %th Email
+      %th Phone
+      %th Actions
+  %tbody
+    - @media_members.each do |mm|
+      %tr
+        %td= mm.first_name
+        %td= mm.last_name
+        %td= mm.job_title || '-'
+        %td= mm.email || '-'
+        %td= mm.phone || '-'
+        %td= link_to 'View', media_member_path(mm)

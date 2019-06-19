@@ -1,0 +1,49 @@
+- new_tag_form = tag.id.blank?
+- form_id = new_tag_form ? 'js-tag-form-new' : "js-tag-form-#{tag.id}"
+- submit_btn_text = new_tag_form ? 'Create Tag' : 'Save Tag'
+
+%div{ id: form_id }
+  = form_for tag do |f|
+    .form-row.mb-2
+      .col
+        - if new_tag_form
+          %button#js-tag-form-preview.btn.btn-primary Tag Preview
+        - else
+          %button#js-tag-form-preview.btn.btn-primary{ style: "background-color: #{tag.color}; border-color: #{tag.color}; color: #{tag.text_color}" }
+            = tag.name
+      - if !new_tag_form
+        .col.text-right
+          .d-flex.justify-content-end.align-items-center.full-height
+            .pl-2.pr-1.d-inline.u-textGrey
+              .fake-link.grey{ class: "#{form_id}-toggle" }
+                %i.fas.fa-pen.pl-1.pr-1
+                Edit
+            .pl-2.pr-1.d-inline.u-textGrey
+              = link_to tag_path(tag), method: :delete, class: 'grey' do
+                %i.fas.fa-times.pl-1.pr-1
+                Delete
+    #js-tag-form-inputs.form-row{ style: new_tag_form ? '' : 'display: none;' }
+      .form-group.mb-0.col-md-3
+        %label.mb-1 Tag name
+        = f.text_field :name, id: 'js-tag-form-name-input', class: 'form-control', placeholder: 'New tag name...', autocomplete: 'off'
+      .form-group.mb-0.col-md-4
+        %label.mb-1 Description
+        = f.text_field :description, class: 'form-control', placeholder: 'Optional description', autocomplete: 'off'
+      .form-group.mb-0.col-md-2
+        .row
+          .col
+            %label.mb-1 Color
+        .row
+          .d-flex.mx-3
+            %button#js-tag-form-color-btn.btn.btn-primary.mr-1{ type: 'button', style: new_tag_form ? '' : "background-color: #{tag.color}; border-color: #{tag.color}; color: #{tag.text_color}" }
+              %i.fas.fa-redo
+            = f.text_field :color, id: 'js-tag-form-color-input', class: 'form-control input-monospace', placeholder: '#ffffff', pattern: '#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})', style: 'min-width: 6em;', autocomplete: 'off'
+      .form-group.mb-0.col-md-3
+        .d-flex.justify-content-end.align-items-end.full-height
+          %button#js-tag-form-cancel-btn.btn.btn-light.mr-2{ type: 'button'} Cancel
+          = f.submit submit_btn_text, class: 'btn btn-success mt-auto mb-0'
+
+:javascript
+  $(document).ready(function() {
+    Chippa.Tag("#{form_id}")
+  });

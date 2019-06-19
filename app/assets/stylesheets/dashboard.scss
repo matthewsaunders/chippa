@@ -1,0 +1,136 @@
+
+
+// body {
+//   font-family: 'Poppins', sans-serif;
+//   background-color: $light-grey;
+// }
+//
+// .wrapper {
+//   display: flex;
+//   align-items: stretch;
+// }
+//
+// .sidebar {
+//   min-width: 250px;
+//   max-width: 250px;
+//   background-color: $secondary-grey;
+//   color: white;
+//   visibility: visible;
+//   transition: all 0.3s;
+//
+//   & .sidebar-active {
+//     display: none;
+//   }
+//
+//   & .sidebar-inactive {
+//     display: block;
+//   }
+//
+//   i {
+//     margin-right: 0.4em;
+//   }
+//
+//   a {
+//     text-decoration: none;
+//     color: $grey-text;
+//   }
+//
+//   li {
+//     padding: 0.3em 0em !important;
+//   }
+//
+//   li:hover {
+//     background-color: $primary-grey;
+//     font-weight: 500;
+//
+//     a {
+//       color: white !important;
+//     }
+//   }
+//
+//   li.active {
+//     border-left: 4px solid #19aa8d;
+//     background-color: $primary-grey;
+//     font-weight: 500;
+//
+//     a {
+//       color: white !important;
+//     }
+//   }
+//
+//   &.active {
+//     min-width: 80px;
+//     max-width: 80px;
+//     text-align: center;
+//     display: block;
+//     visibility: visible;
+//
+//     & .sidebar-active {
+//       display: block;
+//     }
+//
+//     & .sidebar-inactive {
+//       display: none;
+//     }
+//
+//     & .nav-link {
+//       align-items: center;
+//     }
+//   }
+// }
+//
+// .sidebar-header {
+//   padding: 0.8em 1em;
+//   background-color: $primary-grey;
+// }
+//
+// .main-panel {
+//   width: 100%;
+//   min-height: 100vh;
+// }
+//
+// .main-content {
+//   margin: 0em 0.8em;
+//   margin-top: 0.6em;
+// }
+//
+// .flex-container {
+//   display: flex;
+//   align-items: center;
+// }
+//
+// .tile {
+//   line-height: 1.6em;
+//   text-align: center;
+// }
+//
+// .tile--with-border {
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     height: 3em;
+//     border-left: 2px solid $grey-text;
+//     margin-top: 0.6em;
+//   }
+// }
+//
+// .count-top {
+//   font-size: 0.9rem;
+// }
+//
+// .count-middle {
+//   font-size: 2rem;
+//   font-weight: 600;
+// }
+//
+// @media (max-width: 767.98px) {
+//   .sidebar {
+//     display: none;
+//     transition: all 0.3s;
+//
+//     &.active {
+//       visibility: visible;
+//     }
+//   }
+// }

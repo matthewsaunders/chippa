@@ -1,0 +1,26 @@
+%title Chippa
+%meta{name: 'description', content: 'PR media lists made easy'}
+
+= favicon_link_tag asset_path('cat.png'), rel: 'icon', type: 'image/png'
+= csrf_meta_tags
+= csp_meta_tag
+
+-# fonts
+%link{ href: "https://fonts.googleapis.com/css?family=Roboto+Mono", rel: "stylesheet" }
+
+-# stylesheets
+%link{ href: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", rel: "stylesheet", integrity: "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin: "anonymous"}
+%link{ rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css", integrity: "sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ", crossorigin: "anonymous" }
+%link{ rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/open-color/1.6.3/open-color.min.css" }
+-# %link{ href: "https://cdn.quilljs.com/1.3.6/quill.snow.css", rel: "stylesheet" }
+%link{ href: "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css", rel: "stylesheet" }
+= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+
+-# javascript
+%script{ src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" }
+%script{ src: "https://code.jquery.com/ui/1.12.1/jquery-ui.js" }
+%script{ src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" }
+%script{ src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", integrity: "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", crossorigin: "anonymous" }
+-# %script{ src: "https://cdn.quilljs.com/1.3.6/quill.js" }
+%script{ src: "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js" }
+= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

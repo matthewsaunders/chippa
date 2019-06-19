@@ -1,0 +1,43 @@
+
+
+// $primary-grey: #293846;
+// $secondary-grey: #2f4050;
+//
+// $grey-text: #a7b1c2;
+// $light-grey: #f3f3f4;
+//
+// .u-bgWhite {
+//   background-color: white;
+// }
+//
+// .u-bgPrimary {
+//   background-color: $primary-grey;
+// }
+//
+// .u-textWhite {
+//   color: white;
+// }
+//
+// .u-textGrey {
+//   color: $grey-text;
+// }
+
+$colors-red: #F78888;
+$colors-yellow: #F3D250;
+$colors-grey: #ECECEC;
+$colors-light-blue: #90CCF4;
+$colors-blue: #5DA2D5;
+
+$colors-white: #FFF;
+
+$colors-text-grey: #5F748A;
+
+$colors-bg-grey: #F4F6F9;
+
+.u-bgWhite {
+  background-color: $colors-white;
+}
+
+.u-bgGrey {
+  background-color: $colors-bg-grey;
+}

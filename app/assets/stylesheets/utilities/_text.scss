@@ -1,0 +1,9 @@
+.u-noTextDecoration {
+  color: $colors-text-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $colors-text-grey;
+    text-decoration: none;
+  }
+}

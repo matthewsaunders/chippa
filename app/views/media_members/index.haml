@@ -1,0 +1,30 @@
+.row
+  .col
+    %nav.breadcrumb.mb-0.u-bgWhite
+      .container
+        %a.breadcrumb-item{ href: dashboard_path }
+          Dashboard
+        %span.breadcrumb-item.active
+          Media Members
+
+.u-bgGrey.u-fullHeight
+  .container
+    .row.py-4
+      .col
+        %p.align-middle
+          Showing #{@metadata[:from]} to #{@metadata[:to]} of #{@metadata[:total]} entries
+      .col
+        .btn-group
+          %a.btn.btn-outline-primary{ href: tags_path } Tags
+      .col
+        .float-right
+          %a.btn.btn-outline-info{ href: new_media_member_path } Add Media Member
+
+    - if params[:view] == 'cards'
+      = render 'media_members/cards'
+    -else
+      = render 'media_members/table'
+
+    .row
+      .col
+        = will_paginate @media_members, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

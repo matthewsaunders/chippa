@@ -1,0 +1,13 @@
+- name = list.present? ? list.name : name
+- link = list.present? ? media_list_path(list) : link
+
+.col-md-4.my-3
+  %a.card.u-bgWhite.u-noTextDecoration{ href: link }
+    .card-body
+      %h5.card-title
+        = name
+      -# %p.card-text
+      -#   - if list.present?
+      -#     - list.tags.each do |tag|
+      -#       %span.badge{ style: "background-color: #{tag.color}; color: #{label_color(tag.color)}"}
+      -#         = tag.name
