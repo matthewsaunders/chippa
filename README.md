@@ -28,7 +28,7 @@ The main problems with an excel spreadsheet are:
         ~ Every software engineer when they hear of a new SaaS product idea
 ```
 
-I could build a custom solution for this, but why?  This would be a lot of work when a SaaS or Off The Shelf solution for this already exists.  Next!
+I could build a custom solution for this, but why?  This would be a lot of work when a SaaS or Off The Shelf solution for this probably already exists.  Next!
 
 ### Solution 2
 
@@ -36,22 +36,22 @@ There has to be a SaaS solution for this already... and there is!  Woohoo!!
 
 Ok, we're done.  Let's go ho... not so fast!
 
-The SaaS solution costs > $20k / year?!  This is because of how they view these media lists.  Instead of saying each organization has its own media lists, this solution says we have a master media list.  This master list contains information from everyone else's media lists.  If you need to add or update people, go ahead, but everyone else including other pr formds who have bought in will have these updates too.
+The SaaS solution costs > $20k / year?!  This is because of how they view these media lists.  Instead of saying each organization has its own media lists, this solution says we have a master media list and you have to buy in to gain access.  This master list contains information from everyone else's media lists.  If you need to add or update people, go ahead, but everyone else including competing pr firms will have this information too.
 
-So to use this company you have to:
+So to use this solution you have to...
 
 * Give up your IP about media contacts
 * Pay a ludicrous amount to use it
 
-This might be tempting for a new pr firm or a firm moving to a new market, but not for an established pr firm like that one my girlfriend works at.  Next!
+This might be tempting for a new pr firm or a firm moving to a new market, but not for an established pr firm.  Next!
 
 ### Solution 3
 
-I told my girlfriend to have a shared excel document within the firm.  That did not work because they do not have a shared document system setup and that doing so would cost more money than the firm was willing to pay.  Next!
+I told my girlfriend to have a shared excel document within the firm.  That will not work because they do not have a shared document system setup and that doing so would cost more money than the firm is willing to pay.  Next!
 
 ### Solution 4
 
-I then suggested they look into something a great SaaS tool called [Airtable](https://airtable.com/).  For their needs, they would need to use one of the paid account tiers.  For a PR firm of ~60 people, that works out to >$10k / year.  Again, too rich for their blood.  Next!
+I then suggested they look into a SaaS tool like [Airtable](https://airtable.com/).  For their needs, they would use one of the paid tiers.  For a PR firm of ~60 people, that works out to >$10k / year.  Again, too rich for their blood.  Next!
 
 ### ~~Solution 5~~ Solution 1
 
@@ -62,14 +62,14 @@ I can build that!  It may not make a good business, but I can build that.
 * I can practice building something for a customer (my girlfriend).
 * I have access to a product / subject matter expert (my girlfriend).
 * It will give me something to point as a portfolio project.
-* It will be fun and rewarding to help people I know with their problem
+* It will be fun and rewarding to help people I know with their problems.
 
 
 #### Cons:
 
 * I won't make a lot or any money for my efforts.
 
-I am not in it for the money and this repo exists, so Solution 5 it is!
+I am not in it for the money and this repo exists, so ~~Solution 5~~ Solution 1 it is!
 
 ## Feature Set
 
@@ -82,4 +82,4 @@ Chippa is still a work in progress, but here is the planned feature set:
 
 ## Why 'chippa'?
 
-Chippa is the name of my girlfriend's cat.  I like this cat so I named the project after the cat.
+Chippa is the name of my girlfriend's cat.  I like this cat so I named the project it.
